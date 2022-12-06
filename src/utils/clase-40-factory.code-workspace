@@ -1,0 +1,17 @@
+{
+    "folders": [
+		{
+			"name": "clase-40-factory",
+			"path": "../../../../clases/clase-40-factory"
+		},
+		{
+			"name": "singleton",
+			"path": "../../../../clases/clase-39-singleton/singleton"
+		},
+		{
+			"name": "Entrega-20-factory-dao-dto",
+			"path": "../.."
+		}
+	],
+    "settings": {}
+}
