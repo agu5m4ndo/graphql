@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const defaultRoute = require('./default');
 const mainView = require('./mainView');
 const products = require('./products');
 const { testView, productosTest } = require('./productsTest');

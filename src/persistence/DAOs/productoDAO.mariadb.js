@@ -33,7 +33,8 @@ class ProductoDaoMariadb extends ContainerSQL {
     }
 
     async getAllProducts() {
-        return await super.getAll();
+        let res = await super.getAll();
+        return res;
     }
 
     async deleteProductById(id) {

@@ -2,12 +2,30 @@ const { graphqlHTTP } = require('express-graphql');
 const schema = require('../utils/buildSchema')
 const SQLFactory = require('../persistence/factory');
 const factory = new SQLFactory();
-const ProductoDaoMariadb = factory.create('product');
+const productoDaoMariadb = factory.create('product');
+
+const saveProduct = async(object) => {
+    return await productoDaoMariadb.saveProduct(object.object);
+}
+
+const getProductById = async(id) => {
+    return await productoDaoMariadb.getProductById(id.id);
+}
+
+const getAllProducts = async() => {
+    return await productoDaoMariadb.getAllProducts();
+}
+
+const deleteProductById = async(id) => {
+    return await productoDaoMariadb.deleteProductById(id.id);
+}
+
+
 const root = {
-    saveProduct: ProductoDaoMariadb.saveProduct,
-    getProductById: ProductoDaoMariadb.getProductById,
-    getAllProducts: ProductoDaoMariadb.getAllProducts,
-    deleteProductById: ProductoDaoMariadb.deleteProductById
+    saveProduct,
+    getProductById,
+    getAllProducts,
+    deleteProductById
 }
 
 module.exports = graphqlHTTP({

@@ -15,7 +15,7 @@ input inputProducto {
 },
 type Query {
     getProductById(id: ID!): Producto,
-    getAllProducts(valor: String): [Producto],
+    getAllProducts: [Producto],
 },
 type Mutation {
     saveProduct(object: inputProducto): Producto,

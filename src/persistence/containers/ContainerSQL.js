@@ -32,7 +32,6 @@ class ContainerSQL {
                 console.log('No se pudieron traer los elementos de la tabla')
                 console.log(err)
             })
-
     }
     async deleteById(id) {
         return await knex(this.options)(`${this.tableName}`).del().where('id', id)

@@ -1,0 +1,27 @@
+query {
+  getAllProducts {
+    id
+    name
+    price
+    thumbnail
+  }
+}
+
+query {
+  getProductById(id: "1") {    
+    name
+    price
+  }
+}
+
+mutation {
+  saveProduct(object:{name:"Prod 6", price: 700, thumbnail: "test"}) {
+    name
+    }
+}
+
+mutation {
+  deleteProductById(id: "82") {
+    name
+  }
+}
